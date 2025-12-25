@@ -1,0 +1,78 @@
+<mvc:View
+    controllerName="uploadfile.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    xmlns:u="sap.ui.unified"
+    xmlns:l="sap.ui.layout"
+    xmlns="sap.m">
+
+    <l:VerticalLayout class="sapUiSmallMargin">
+
+        <!-- Label + FileUploader -->
+        <Label text="Upload Excel File" labelFor="fileUploader" />
+
+        <u:FileUploader
+            id="fileUploader"
+            name="uploadExcel"
+            tooltip="Upload Excel File"
+            change="onFileUpload" />
+
+        <!-- Load Excel Button -->
+        <Button
+            text="Load Excel Data"
+            press="handleUploadPress"
+            class="sapUiSmallMarginTop"
+            type="Emphasized"
+            icon="sap-icon://attachment" />
+
+
+        <!-- Visible Title (H2) -->
+        <Title text="Sales Order Report 2025" class="sapUiSmallMarginTop" level="H2" />
+
+
+        <!-- Table to show Excel data -->
+        <Table
+            id="salesTable"
+            mode="MultiSelect"
+            visible="false"
+            class="sapUiSmallMarginTop">
+
+            <columns>
+                <Column><Text text="Sales Order ID" /></Column>
+                <Column><Text text="Customer Name" /></Column>
+                <Column><Text text="Order Date" /></Column>
+                <Column><Text text="Amount" /></Column>
+                <Column><Text text="Status" /></Column>
+            </columns>
+
+            <items>
+                <ColumnListItem>
+                    <cells>
+                        <Text text="{SalesOrderID}" />
+                        <Text text="{SalesOrderName}" />
+                        <Text text="{SalesOrderDate}" />
+                        <Text text="{Amount}" />
+                        <Text text="{Status}" />
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+
+        <!-- Buttons -->
+        <Button
+            text="Download Selected Rows (PDF)"
+            press="onDownloadSelectedPDF"
+            icon="sap-icon://pdf-attachment"
+            class="sapUiSmallMarginTop"
+            type="Emphasized" />
+
+        <Button
+            text="Download Excel"
+            press="onDownloadExcel"
+            icon="sap-icon://excel-attachment"
+            class="sapUiSmallMarginTop"
+            type="Emphasized" />
+
+    </l:VerticalLayout>
+
+</mvc:View>
