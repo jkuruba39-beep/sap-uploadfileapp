@@ -48,9 +48,9 @@
             <items>
                 <ColumnListItem>
                     <cells>
-                        <Text text="{SalesOrderID}" />
-                        <Text text="{SalesOrderName}" />
-                        <Text text="{SalesOrderDate}" />
+                        <Text text="{Sales Order ID}" />
+                        <Text text="{Customer Name}" />
+                        <Text text="{Order Date}" />
                         <Text text="{Amount}" />
                         <Text text="{Status}" />
                     </cells>
