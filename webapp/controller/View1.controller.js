@@ -100,9 +100,9 @@ sap.ui.define([
             doc.text("Selected Sales Order Records", 14, 15);
 
             const columns = [
-                { header: "Sales Order ID", dataKey: "SalesOrderID" },
-                { header: "Customer Name", dataKey: "SalesOrderName" },
-                { header: "Order Date", dataKey: "SalesOrderDate" },
+                { header: "Sales Order ID", dataKey: "Sales Order ID" },
+                { header: "Customer Name", dataKey: "Sales Order Name" },
+                { header: "Order Date", dataKey: "Order Date" },
                 { header: "Amount", dataKey: "Amount" },
                 { header: "Status", dataKey: "Status" }
             ];
