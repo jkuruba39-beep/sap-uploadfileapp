@@ -24,6 +24,12 @@
             class="sapUiSmallMarginTop"
             type="Emphasized"
             icon="sap-icon://attachment" />
+             <Button
+            text="Load Excel Data"
+            press="handleUploadPress"
+            class="sapUiSmallMarginTop"
+            type="Emphasized"
+            icon="sap-icon://attachment" />
 
 
         <!-- Visible Title (H2) -->
